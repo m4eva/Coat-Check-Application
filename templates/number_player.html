@@ -1,0 +1,15 @@
+{% extends "base_player.html" %}
+{% block content %}
+    <section id="number-section">
+        <p>Client Name</p>
+        <p>Client Phone</p>
+
+         <!-- Loop through all the client's items in a horizontal list -->
+        <div id="item-list">
+          <p class="item"> Img here </p>
+        </div>
+        
+        <h3>Number {{ number }}</h3>
+    </section>
+    <button id="unassign">Unassign Number</button>
+{% endblock %}
