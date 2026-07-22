@@ -7,11 +7,11 @@ def index():
 
 @app.route('/home')
 def home():
-  return render_template('base_player.html')
+  return render_template('home_player.html')
 
 @app.route('/number/<int:num>')
 def number(num):
-  return render_template('base_player.html', num=num)
+  return render_template('number_player.html', num=num)
 
 
 if __name__ == "__main__":
