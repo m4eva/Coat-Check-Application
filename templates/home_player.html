@@ -1,4 +1,5 @@
 {% extends "base_player.html" %}
+{% block script %}/static/script_player.js{% endblock %}
 {% block content %}
     <section id="message-board">
         <!-- Validation for new requests will come here -->
@@ -6,8 +7,15 @@
     </section>
     <section id="coat-numbers">
         <!-- Loop through all the numbers in a horizontal list -->
-        <div class="number">
-            <p>Number<br/>0</p>
-        </div>
+        {% for n in numbers %}
+        <a href="/number/{{ n }}"><div class="number unassigned">
+            <p>Number<br/><span class="num">{{ n }}</span></p>
+        </div></a>
+        {% endfor %}
+
+        <!--testing-->
+        <a href="/number/21"><div class="number assigned">
+            <p>Number<br/><span class="num">21</span></p>
+        </div></a>
     </section>
 {% endblock %}

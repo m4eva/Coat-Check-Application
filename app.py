@@ -7,7 +7,7 @@ def index():
 
 @app.route('/home')
 def home():
-  return render_template('home_player.html')
+  return render_template('home_player.html', numbers=range(1, 11))
 
 @app.route('/number/<int:num>')
 def number(num):
