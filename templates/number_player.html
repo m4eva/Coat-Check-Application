@@ -1,6 +1,7 @@
 {% extends "base_player.html" %}
+{% block script %}/static/script_player.js{% endblock %}
 {% block content %}
-    <button id="back">Back</button>
+    <a href="/home"><button id="back">Back</button></a>
     <section id="number-section">
         <div>
             <p style="font-size: 25px; margin-bottom: 0px;">Client Name</p>
@@ -9,7 +10,11 @@
 
         <!-- Loop through all the client's items in a horizontal list -->
         <div id="item-list">
-          <p class="item"> Img here </p>
+            {% for i in items %}
+            <div class="item">
+                <img class="item" src="{{ i }}" alt="Item Image">
+            </div>
+            {% endfor %}
         </div>
         
         <h3>Number<br/>{{ num }}</h3>

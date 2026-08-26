@@ -11,7 +11,7 @@ def home():
 
 @app.route('/number/<int:num>')
 def number(num):
-  return render_template('number_player.html', num=num)
+  return render_template('number_player.html', num=num, items=["",""])
 
 
 if __name__ == "__main__":
